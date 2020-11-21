@@ -1,0 +1,22 @@
+security:
+  basic:
+    enabled: true
+  user:
+    name: username-lee
+    password: password-lee
+server:
+  port: 8099
+eureka:
+  instance:
+    hostname: 127.0.0.1
+    prefer-ip-address: true
+    instance-id: ${eureka.instance.hostname}:${server.port}
+  client:
+    service-url:
+      defaultZone: http://username-lee:password-lee@${eureka.instance.hostname}:${server.port}/eureka
+    registerWithEureka: false
+    fetchRegistry: false
+
+spring:
+  application:
+    name: lee-eurekaserver
