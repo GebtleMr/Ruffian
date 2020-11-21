@@ -7,16 +7,15 @@ eureka:
     instance-id: ${eureka.instance.hostname}:${server.port}
   client:
     service-url:
-      defaultZone: http://username-lee:password-lee@${eureka.instance.hostname}:${server.port}/eureka
+      defaultZone: http://${spring.security.user.name}:${spring.security.user.password}@${eureka.instance.hostname}:${server.port}/eureka
     registerWithEureka: false
     fetchRegistry: false
-
 spring:
   application:
     name: lee-eurekaserver
   security:
-  basic:
-    enabled: true
-  user:
-    name: username-lee
-    password: password-lee
+    basic:
+      enabled: false
+    user:
+      name: usernameLee
+      password: passwordLee
