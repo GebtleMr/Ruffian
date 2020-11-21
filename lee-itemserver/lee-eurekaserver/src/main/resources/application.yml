@@ -1,9 +1,3 @@
-security:
-  basic:
-    enabled: true
-  user:
-    name: username-lee
-    password: password-lee
 server:
   port: 8099
 eureka:
@@ -20,3 +14,9 @@ eureka:
 spring:
   application:
     name: lee-eurekaserver
+  security:
+  basic:
+    enabled: true
+  user:
+    name: username-lee
+    password: password-lee
